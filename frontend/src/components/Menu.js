@@ -20,7 +20,7 @@ const Menu = () => {
             <ul>
                 <li><NavLink exact to="/" activeStyle={activeStyle}>홈</NavLink></li>
                 <li><NavLink exact to="/mypage" activeStyle={activeStyle}>내 정보</NavLink></li>
-                <li><NavLink to="/search" activeStyle={activeStyle}>검색</NavLink></li>
+                <li><NavLink to="/search" activeStyle={activeStyle}>박보검색</NavLink></li>
             </ul>
         </SideBar>
     );
