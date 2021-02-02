@@ -1,15 +1,22 @@
 import React from 'react';
+import css from 'styled-components';
 
 function SearchInput({search, keyword, stock}) {
-    return (
+  const Input = css.input`
+    size: "25",
+    type: "text",
+    float: left;
+    `
+
+  return (
+      <div>
+        <Input className="search_input" onChange={keyword}/>
+        <button onClick={search}>검색</button>
         <div>
-          <input type={"text"} className="search_input" size="25" onChange={keyword}/>
-          <button onClick={search}>검색</button>
-          <div>
-          종목은 {stock}입니다.
-          </div>
-      </div>
-    );
+          {stock}
+        </div>
+    </div>
+  );
 }
 
 export default SearchInput;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import getStock from '../services/stock';
 import SearchInput from '../components/Search';
-import qs from 'querystring';
 
 function Search() {
   const [stock, setStock] = useState('');
