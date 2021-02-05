@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import login from '../services/login';
-import { getStock, getFavoriteStock } from '../services/stock';
+import { getStock, getFavoriteStock, getRealStock } from '../services/stock';
 import SearchInput from '../components/Search';
 import FavoriteList from '../components/Favorite';
 import StockTable from '../components/StockTable';

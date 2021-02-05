@@ -8,7 +8,12 @@ function getFavoriteStock(value, callback) {
     Axios('stock/favorite', value, callback);
 }
 
+function getRealStock(value, callback) {
+    Axios('stock/real', value, callback);
+}
+
 export {
     getStock,
     getFavoriteStock,
+    getRealStock,
 };
