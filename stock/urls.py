@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import current_stock
+from .views import *
 
 urlpatterns = [
-    path('', current_stock),
+    path('current/', current_stock),
+    path('favorite/', favorite_stock),
+    path('real/', real_stock),
 ]
