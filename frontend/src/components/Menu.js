@@ -5,23 +5,39 @@ import css from 'styled-components';
 const Menu = () => {
     
     const SideBar = css.div`
-    width: 200px;
-    border: 1px solid black;
-    float: left;
+        float: left;
+        height: 100vh;
+        width: 25vw;
+        background-color: #F0F0F0;
+    `
+    const UL = css.ul`
+        list-style-type: none;
+        padding: 0px;
+        text-align: center;
+        font-size: 1.5rem;
     `
 
-    const activeStyle = {
-    color: 'green',
-    fontSize: '1rem'
-    };
+    const LI = css.li`
+        padding: 50px;
+    `
+
+    const activeClassName = "nav"
+    const StyledLink = css(NavLink).attrs({ activeClassName })`
+        text-decoration:none;
+        color: green;
+        &.${activeClassName} {
+            color: blue;
+        }
+    `
+
 
     return (
         <SideBar>
-            <ul>
-                <li><NavLink exact to="/" activeStyle={activeStyle}>홈</NavLink></li>
-                <li><NavLink exact to="/mypage" activeStyle={activeStyle}>내 정보</NavLink></li>
-                <li><NavLink to="/search" activeStyle={activeStyle}>박보검색</NavLink></li>
-            </ul>
+            <UL>
+                <LI><StyledLink exact to="/">홈</StyledLink></LI>
+                <LI><StyledLink exact to="/mypage">내 정보</StyledLink></LI>
+                <LI><StyledLink to="/search">박보검색</StyledLink></LI>
+            </UL>
         </SideBar>
     );
 };
