@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import login from '../services/login';
-import getStock from '../services/stock';
+import { getStock, getFavoriteStock } from '../services/stock';
 import SearchInput from '../components/Search';
-import Favorite from '../components/Favorite';
+import FavoriteList from '../components/Favorite';
+import StockTable from '../components/StockTable';
 
 function Home() {
   const [user, setUser] = useState('');
@@ -16,11 +17,11 @@ function Home() {
 
   function userCallback(data) {
     setUser(data);
+    initFavoriteStock();
   }
 
   function favoriteCallback(data) {
-    const d = ["즐찾1","즐찾2"];
-    setFavorites(d);
+    setFavorites(data);
   }
 
   const getWord = (e)=> {
@@ -33,6 +34,10 @@ function Home() {
     getStock(param,  stockCallback);
   }
 
+  function initFavoriteStock() {
+    getFavoriteStock(null, favoriteCallback);
+  }
+
   useEffect(
     () => {
         login(userCallback);
@@ -41,16 +46,28 @@ function Home() {
 
   return (
     <div>
-      <header>
-        사용자는 {user}입니다.
-      </header>
-      <SearchInput 
-        search={search} 
-        keyword={getWord}
-        stock={stock}
-      />
-      <Favorite
-        favorites={favorites}/>
+      <table style={{width: '75vw', float: 'left', 'border-spacing': '20px'}}>
+        <tr>
+          <td>
+            <SearchInput 
+              search={search} 
+              keyword={getWord}
+              stock={stock} />
+            사용자는 {user}입니다.
+            <StockTable
+              stocks={favorites}/>
+          </td>
+          <td>
+            <FavoriteList
+              favorites={favorites}/>
+          </td>
+        </tr>
+        <tr>
+          <td colSpan="2">차트</td>
+        </tr>
+      </table>
+      
+      
     </div>
   );
 }
