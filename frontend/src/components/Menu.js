@@ -7,14 +7,15 @@ const Menu = () => {
     const SideBar = css.div`
         float: left;
         height: 100vh;
-        width: 25vw;
+        width: 180px;
+        // width: 25vw;
         background-color: #F0F0F0;
     `
     const UL = css.ul`
         list-style-type: none;
         padding: 0px;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     `
 
     const LI = css.li`
