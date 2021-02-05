@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import getStock from '../services/stock';
+import { getStock } from '../services/stock';
 import SearchInput from '../components/Search';
 
 function Search() {

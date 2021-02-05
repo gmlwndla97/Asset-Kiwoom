@@ -1,5 +1,14 @@
 import Axios from '../core/Axios';
 
-export default function getStock(value, callback) {
-    Axios('stock', value, callback);
+function getStock(value, callback) {
+    Axios('stock/current', value, callback);
 }
+
+function getFavoriteStock(value, callback) {
+    Axios('stock/favorite', value, callback);
+}
+
+export {
+    getStock,
+    getFavoriteStock,
+};
