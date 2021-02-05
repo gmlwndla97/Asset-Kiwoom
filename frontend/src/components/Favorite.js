@@ -1,10 +1,9 @@
 import React from 'react';
 import css from 'styled-components';
 
-const FavoriteItem = ({item}) => {
+const Item = ({item}) => {
     const P = css.p`
         font-size: 1.2rem;
-        color: #868e96;
     `
     const B = css.b`
         color: #212529;
@@ -16,18 +15,17 @@ const FavoriteItem = ({item}) => {
     );
 }
 
-const FavoriteList = ({favorites}) => {
+const List = ({favorites}) => {
     const UL = css.ul`
         list-style-type: none;
         background-color: #F0F0F0;
         padding: 1rem;
-        width: 300px;
         border-radius: 5px;
     `
 
     const favoriteList = favorites.map(
         (favorite, index) => (
-            <FavoriteItem item={favorite}/>
+            <Item item={favorite}/>
         )
     )
 
@@ -36,18 +34,18 @@ const FavoriteList = ({favorites}) => {
     );
 }
 
-const Favorite = ({favorites}) => {
+const FavoriteList = ({favorites}) => {
     
     const Div = css.div`
-        float:right
+       
     `
 
     return (
         <Div>
             즐겨찾기 목록
-            <FavoriteList favorites={favorites}/>
+            <List favorites={favorites}/>
         </Div>
     );
 };
 
-export default Favorite;
+export default FavoriteList;
