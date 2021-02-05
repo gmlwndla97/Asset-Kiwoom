@@ -1,20 +1,22 @@
 import React from 'react';
 import css from 'styled-components';
 
-function SearchInput({search, keyword, stock}) {
-  const Input = css.input`
-    size: "25",
-    type: "text",
-    float: left;
-    `
+const Input = css.input.attrs({
+  type: "text",
+  size: "25"
+})`
+  float: left;
+`;
 
+function SearchInput({search, keyword, stock}) {
+  
   return (
+    <div>
+      <Input onChange={keyword}/>
+      <button onClick={search}>검색</button>
       <div>
-        <Input className="search_input" onChange={keyword}/>
-        <button onClick={search}>검색</button>
-        <div>
-          {stock}
-        </div>
+        {stock}
+      </div>
     </div>
   );
 }
