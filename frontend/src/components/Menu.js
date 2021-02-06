@@ -36,8 +36,8 @@ const Menu = () => {
         <SideBar>
             <UL>
                 <LI><StyledLink exact to="/">홈</StyledLink></LI>
-                <LI><StyledLink exact to="/mypage">내 정보</StyledLink></LI>
-                <LI><StyledLink to="/search">박보검색</StyledLink></LI>
+                <LI><StyledLink exact to="/mypage">내 정보석</StyledLink></LI>
+                <LI><StyledLink to="/search">검색</StyledLink></LI>
             </UL>
         </SideBar>
     );

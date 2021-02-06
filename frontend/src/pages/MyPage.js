@@ -2,35 +2,51 @@ import React, { useState } from 'react';
 import css from 'styled-components';
 
 function MyPage() {
-  const SideBar = css.div`
+  const SelectionBar = css.div`
   width: 500px;
-  border: 1px solid black;
+  border-radius: 5px;
   height: 100px;
+  padding-left:20px;
+  float: left;
+  `
+
+  const Box = css.div`
+  width: 500px;
+  margin-top:20px;
+  padding-left:20px;
+  height: 500px;
   float: left;
   `
 
   const Filter = css.div`
-  width: 1000px;
-  border: 1px solid black;
-  height: 100px;
+  background-color: #F0F0F0;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 500px;
+  height: 50px;
   float: left;
   `
 
 
-  const Box = css.div`
-  width: 1000px;
-  border: 1px solid black;
-  height: 500px;
-  margin-left:200px;
+
+  const History=css.div`
+  background-color: #F0F0F0;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top:30px;
+  width: 500px;
+  height: 300px;
   float: left;
   `
 
 
   const UL = css.ul`
   list-style-type: none;
+  background-color: #F0F0F0;
   padding: 1rem;
   border-radius: 5px;
   `
+
   const LI = css.li`
   display: inline-block;
   padding : 1rem;
@@ -40,22 +56,28 @@ function MyPage() {
     color: red;
   }
   `
- 
 
   return (
     <div>
-      <SideBar>
+      <SelectionBar>
          <UL>
             <LI> <a href="#">선택1 </a></LI>
             <LI>  <a href="#">선택2 </a></LI>
             <LI> <a href="#"> 선택3 </a></LI>
           </UL>
-      </SideBar>
+      </SelectionBar>
       <Box>
         <Filter>
           필터
         </Filter>
-        거래 내역 
+        <History>
+          <UL>
+            <li> 거래 내역 1 </li>
+            <li> 거래 내역 2 </li>
+            <li> 거래 내역 3</li>
+          </UL>
+        </History>
+     
       </Box>
       
     </div>
