@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
 import css from 'styled-components';
 import styled from 'styled-components';
-import Modal from '../components/Modal';
+
 
 
 function MyPage(props) {
@@ -79,25 +79,7 @@ function MyPage(props) {
   }
   `
 
-  //팝업추가
-  const [modalVisible, setModalVisible] = useState(false)
-  const openModal = () => {
-    setModalVisible(true)
-  }
-  // const closeModal = () => {
-  //   setModalVisible(false)
-  // }
-    
-  const handleCloseModal= e=>{
-    if(modalVisible) setModalVisible(false)
-  }
-
-  useEffect(() =>{
-    window.addEventListener('click', handleCloseModal);
-    return ()=>{
-      window.removeEventListener('click', handleCloseModal);
-    };
-  }, []);
+ 
   
   return (
     <div style={{width: '75vw', float: 'left', 'border-spacing': '20px'}}>
@@ -145,36 +127,7 @@ function MyPage(props) {
         </button>
         {popup && <Popup onClose={handlePopup} />}
       </Container> */}
-      <>
-      <button onClick={openModal}>Open Modal</button>
-      {
-        modalVisible && <Modal
-          visible={modalVisible}
-          closable={true}
-          maskClosable={true}
-          onClose={handleCloseModal}
-          >
-          <input
-            name="code"
-            type="text"
-            placeholder="종목코드"
-          />
-           <input
-            name="number"
-            type="text"
-            placeholder="수량"
-             />
-            <input
-             name="password"
-             type="password"
-             placeholder="비밀번호"
-              />
-            <button >
-            {" "} 매매{" "}
-            </button>
-          </Modal>
-      }
-    </>
+     
 
     </div>
   );
