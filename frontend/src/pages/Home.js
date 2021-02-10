@@ -10,6 +10,7 @@ function Home() {
   const [stock, setStock] = useState('');
   const [code, setCode] = useState('');
   const [favorites, setFavorites] = useState([]);
+  const [realStocks, setRealStocks] = useState([]);
 
   function stockCallback(data) {
     setStock(JSON.stringify(data));
@@ -18,10 +19,15 @@ function Home() {
   function userCallback(data) {
     setUser(data);
     initFavoriteStock();
+    connectRealStock();
   }
 
   function favoriteCallback(data) {
     setFavorites(data);
+  }
+
+  function realStockCallback(data) {
+    setRealStocks(data);
   }
 
   const getWord = (e)=> {
@@ -36,6 +42,10 @@ function Home() {
 
   function initFavoriteStock() {
     getFavoriteStock(null, favoriteCallback);
+  }
+
+  function connectRealStock() {
+    getRealStock(null, realStockCallback);
   }
 
   useEffect(
@@ -55,7 +65,7 @@ function Home() {
               stock={stock} />
             사용자는 {user}입니다.
             <StockTable
-              stocks={favorites}/>
+              stocks={realStocks}/>
           </td>
           <td>
             <FavoriteList
