@@ -5,6 +5,7 @@ import SearchInput from '../components/Search';
 import FavoriteList from '../components/Favorite';
 import StockTable from '../components/StockTable';
 
+
 function Home() {
   const [user, setUser] = useState('');
   const [stock, setStock] = useState('');
@@ -12,6 +13,7 @@ function Home() {
   const [favorites, setFavorites] = useState([]);
   const [realStocks, setRealStocks] = useState([]);
 
+  
   function stockCallback(data) {
     setStock(JSON.stringify(data));
   }
@@ -54,6 +56,7 @@ function Home() {
     }, []
   );
 
+ 
   return (
     <div>
       <table style={{width: '75vw', float: 'left', 'border-spacing': '20px'}}>
@@ -63,6 +66,8 @@ function Home() {
               search={search} 
               keyword={getWord}
               stock={stock} />
+
+         
             사용자는 {user}입니다.
             <StockTable
               stocks={realStocks}/>
