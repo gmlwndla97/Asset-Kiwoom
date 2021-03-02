@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url('stock/', include('stock.urls')),
     url('user/', include('user.urls')),
+    url('trade/', include('trade.urls')),
     re_path('.*', TemplateView.as_view(template_name='index.html'))
 ]

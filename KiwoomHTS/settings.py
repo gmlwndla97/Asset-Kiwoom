@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',   # CORS 관련 추가
     'corsheaders',  # CORS 관련 추가
     'stock',
-    'user'
+    'user',
+    'trade',
 ]
 
 MIDDLEWARE = [

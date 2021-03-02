@@ -16,14 +16,12 @@ def current_user(request):
     accounts = kiwoom.GetLoginInfo("ACCNO")  # 전체 계좌 리스트
     user_id = kiwoom.GetLoginInfo("USER_ID")  # 사용자 ID
     user_name = kiwoom.GetLoginInfo("USER_NAME")  # 사용자명
-    keyboard = kiwoom.GetLoginInfo("KEY_BSECGB")  # 키보드보안 해지여부
-    firewall = kiwoom.GetLoginInfo("FIREW_SECGB")  # 방화벽 설정 여부
+    stock_account = '8156687211'
+    output = kiwoom.SendOrder("시장가매수", "0101", stock_account, 1, "005930", 10, 0, "03", "")
 
     print(account_num)
     print(accounts)
     print(user_id)
     print(user_name)
-    print(keyboard)
-    print(firewall)
 
     return Response(user_name + user_id)

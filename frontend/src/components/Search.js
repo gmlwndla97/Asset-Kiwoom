@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import css from 'styled-components';
 import Modal from '../components/Modal';
+import {buyStock} from '../services/trade';
 
 
 
 function SearchInput({search, keyword, stock}) {
   const [modalVisible, setModalVisible] = useState(false)
+  const [code, setCode] = useState('')
+  const [number, setNumber] = useState('')
+  const [money, setMoney] = useState('')
 
   const Input = css.input.attrs({
     type: "text",
@@ -13,11 +17,23 @@ function SearchInput({search, keyword, stock}) {
   })`
     float: left;
   `;
-  
 
-  
+//  useEffect(
+//    () => {
+//        buyStock(null,null);
+//    }, []
+//  );
+
+  const getCord = (e)=> {
+    setCode(e.target.value)
+  }
+  const getNumber = (e)=> {
+    setNumber(e.target.value)
+  }
+  const getMoney = (e)=> {
+    setMoney(e.target.value)
+  }
     //팝업추가
-  
     const openModal = () => {
       setModalVisible(true)
     }
@@ -28,6 +44,16 @@ function SearchInput({search, keyword, stock}) {
     const handleCloseModal= e=>{
       if(modalVisible) setModalVisible(false)
     }
+
+    const handleSubmit= e=>{
+        const param = new URLSearchParams();
+        param.append('code', code);
+        param.append('number', number);
+        param.append('money', money);
+        alert(param)
+        buyStock(param,null);
+    }
+
   
     useEffect(() =>{
       window.addEventListener('click', handleCloseModal);
@@ -51,24 +77,26 @@ function SearchInput({search, keyword, stock}) {
                     maskClosable={true}
                     onClose={handleCloseModal}
                     >
-                    <input
+                    <form onSubmit={handleSubmit}>
+                    <input onChange = {getCord}
                       name="code"
                       type="text"
-                      placeholder="종목코드"
+                      placeholder="종목번호"
                     />
-                    <input
+                    <input onChange = {getNumber}
                       name="number"
                       type="text"
                       placeholder="수량"
-                      />
-                      <input
-                      name="password"
-                      type="password"
-                      placeholder="비밀번호"
+                     />
+                      <input onChange = {getMoney}
+                      name="money"
+                      type="text"
+                      placeholder="가격"
                         />
-                      <button >
+                      <button type="submit">
                       {" "} 매매{" "}
                       </button>
+                      </form>
                     </Modal>
                 }
               </>

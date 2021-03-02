@@ -5,7 +5,6 @@ import SearchInput from '../components/Search';
 import FavoriteList from '../components/Favorite';
 import StockTable from '../components/StockTable';
 
-
 function Home() {
   const [user, setUser] = useState('');
   const [stock, setStock] = useState('');
@@ -13,7 +12,14 @@ function Home() {
   const [favorites, setFavorites] = useState([]);
   const [realStocks, setRealStocks] = useState([]);
 
-  
+//  openModal = () => {
+//    this.setState({ isModalOpen: true });
+//  };
+//
+//  closeModal = () => {
+//    this.setState({ isModalOpen: false });
+//  };
+
   function stockCallback(data) {
     setStock(JSON.stringify(data));
   }
@@ -21,7 +27,7 @@ function Home() {
   function userCallback(data) {
     setUser(data);
     initFavoriteStock();
-    connectRealStock();
+    //connectRealStock();
   }
 
   function favoriteCallback(data) {
@@ -56,18 +62,16 @@ function Home() {
     }, []
   );
 
- 
   return (
     <div>
       <table style={{width: '75vw', float: 'left', 'border-spacing': '20px'}}>
         <tr>
           <td>
-            <SearchInput 
-              search={search} 
+            <SearchInput
+              search={search}
               keyword={getWord}
-              stock={stock} />
-
-         
+              stock={stock}
+              buy={stock}/>
             사용자는 {user}입니다.
             <StockTable
               stocks={realStocks}/>

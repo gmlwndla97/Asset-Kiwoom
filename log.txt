@@ -178,3 +178,1147 @@ INFO:django.utils.autoreload:C:\Users\yehwon\Desktop\KiwoomHTS\stock\views.py ch
 INFO:django.utils.autoreload:C:\Anaconda\envs\py38_32\Lib\site-packages\pykiwoom\kiwoom.py changed, reloading.
 INFO:django.utils.autoreload:C:\Anaconda\envs\py38_32\Lib\site-packages\pykiwoom\kiwoom.py changed, reloading.
 INFO:django.utils.autoreload:C:\Anaconda\envs\py38_32\Lib\site-packages\pykiwoom\kiwoom.py changed, reloading.
+ERROR:django.request:Internal Server Error: /stock/current/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\stock\views.py", line 23, in current_stock
+    data = df.to_json(orient="recorcds", force_ascii=False)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\core\generic.py", line 2364, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 85, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 145, in write
+    self.indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 245, in _write
+    indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 167, in _write
+    indent=indent,
+ValueError: Invalid value 'recorcds' for option 'orient'
+ERROR:django.request:Internal Server Error: /stock/current/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\stock\views.py", line 23, in current_stock
+    data = df.to_json(orient="recorcds", force_ascii=False)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\core\generic.py", line 2364, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 85, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 145, in write
+    self.indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 245, in _write
+    indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 167, in _write
+    indent=indent,
+ValueError: Invalid value 'recorcds' for option 'orient'
+ERROR:django.request:Internal Server Error: /stock/current/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\stock\views.py", line 23, in current_stock
+    data = df.to_json(orient="recorcds", force_ascii=False)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\core\generic.py", line 2364, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 85, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 145, in write
+    self.indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 245, in _write
+    indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 167, in _write
+    indent=indent,
+ValueError: Invalid value 'recorcds' for option 'orient'
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /stock/current/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\stock\views.py", line 23, in current_stock
+    data = df.to_json(orient="recorcds", force_ascii=False)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\core\generic.py", line 2364, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 85, in to_json
+    indent=indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 145, in write
+    self.indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 245, in _write
+    indent,
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pandas\io\json\_json.py", line 167, in _write
+    indent=indent,
+ValueError: Invalid value 'recorcds' for option 'orient'
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[-1]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 15, in buy_stock
+    stock_account = accounts[0]
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /trade/buy/
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /trade/buy/
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\user\views.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /trade/buy/
+WARNING:django.request:Method Not Allowed: /trade/buy/
+WARNING:django.request:Method Not Allowed: /trade/buy/
+WARNING:django.request:Method Not Allowed: /trade/buy/
+WARNING:django.request:Method Not Allowed: /trade/buy/
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR:django.request:Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): //
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /users/
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\user\views.py changed, reloading.
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+WARNING:django.security.csrf:Forbidden (CSRF token missing or incorrect.): /trade/buy/
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 37, in buy_stock
+    print(output)
+NameError: name 'output' is not defined
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 37, in buy_stock
+    print(output)
+NameError: name 'output' is not defined
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 39, in buy_stock
+    return Response(output)
+NameError: name 'output' is not defined
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 39, in buy_stock
+    return Response(output)
+NameError: name 'output' is not defined
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 39, in buy_stock
+    return Response(output)
+NameError: name 'output' is not defined
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 39, in buy_stock
+    return Response(output)
+NameError: name 'output' is not defined
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 16, in buy_stock
+    body = json.loads(body_unicode)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 16, in buy_stock
+    body = json.loads(body_unicode)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 16, in buy_stock
+    body = json.loads(body_unicode)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /user/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pykiwoom\kiwoom.py", line 17, in __call__
+    return cls._instance
+AttributeError: type object 'Kiwoom' has no attribute '_instance'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\user\views.py", line 12, in current_user
+    kiwoom = Kiwoom()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pykiwoom\kiwoom.py", line 19, in __call__
+    cls._instance = super().__call__(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pykiwoom\kiwoom.py", line 35, in __init__
+    self._set_signals_slots()
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\pykiwoom\kiwoom.py", line 98, in _set_signals_slots
+    self.ocx.OnEventConnect.connect(self._handler_login)
+AttributeError: 'QAxWidget' object has no attribute 'OnEventConnect'
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 16, in buy_stock
+    body = json.loads(body_unicode)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 16, in buy_stock
+    body = json.loads(body_unicode)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 19, in buy_stock
+    stock_account = kiwoom.GetLoginInfo("ACCNO")[0]
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 24, in buy_stock
+    output = kiwoom.SendOrder("시장가매수", "0101", stock_account[0], 1, code, number, 85000, "00", "")
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 24, in buy_stock
+    output = kiwoom.SendOrder("시장가매수", "0101", stock_account[0], 1, code, number, 85000, "00", "")
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 25, in buy_stock
+    output = kiwoom.SendOrder("시장가매수", "0101", stock_account[0], 1, code, number, 85000, "00", "")
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 21, in buy_stock
+    stock_account = account[0]
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 38, in buy_stock
+    print(output)
+NameError: name 'output' is not defined
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 21, in buy_stock
+    stock_account = account[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 21, in buy_stock
+    stock_account = account[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 21, in buy_stock
+    stock_account = account[0]
+IndexError: list index out of range
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 22, in buy_stock
+    stock_account = account[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /trade/buy/
+Traceback (most recent call last):
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\82105\Anaconda3\envs\py32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 22, in buy_stock
+    stock_account = account[0]
+IndexError: list index out of range
