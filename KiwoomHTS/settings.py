@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',   # CORS 관련 추가
     'corsheaders',  # CORS 관련 추가
+    'debug_toolbar',    # debug 관련 추가
     'stock',
     'user',
     'trade',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware', # CORS 관련 추가
+    'debug_toolbar.middleware.DebugToolbarMiddleware',  # debug 관련 추가
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +58,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# debug 관련 추가
+INTERNAL_IPS = ('127.0.0.1',)
+
 
 # CORS 관련 추가
 CORS_ORIGIN_WHITELIST = [
@@ -96,6 +103,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 ROOT_URLCONF = 'KiwoomHTS.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -114,8 +122,20 @@ TEMPLATES = [
     },
 ]
 
+# Channels 추가
+ASGI_APPLICATION = 'KiwoomHTS.asgi.application'
+
 WSGI_APPLICATION = 'KiwoomHTS.wsgi.application'
 
+
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             "hosts": [('127.0.0.1', 6379)],
+#         },
+#     },
+# }
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -124,6 +144,42 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+# logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'fileFormat': {
+            'format': '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S'
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'log.txt'),
+            'formatter': 'fileFormat'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+
+    },
+    'loggers': {
+        'post': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+        },
+        'django.db.backends': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+        },
     }
 }
 
