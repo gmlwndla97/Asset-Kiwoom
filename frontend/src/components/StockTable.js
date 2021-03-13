@@ -2,15 +2,12 @@ import React from 'react';
 import css from 'styled-components';
 
 const Item = ({item}) => {
-    const P = css.p`
-        font-size: 1.2rem;
-    `
     const B = css.b`
         color: #212529;
     `
     return (
         <li>
-            <P> <B>{item}</B> </P>
+            <B>{item}</B>
         </li>
     );
 }
@@ -18,18 +15,18 @@ const Item = ({item}) => {
 const List = ({stocks}) => {
     const TD = css.td`
         list-style-type: none;
-        padding: 1rem;
+        padding: 3px;
         border-radius: 5px;
     `
 
     const stockList = stocks.map(
         (stock, index) => (
-            <Item item={stock}/>
+            <TD><Item item={stock}/></TD>
         )
     )
 
     return (
-        <TD> {stockList} </TD>
+        <tr>{stockList}</tr>
     );
 }
 
@@ -39,15 +36,16 @@ const StockTable = ({stocks}) => {
         background-color: #F0F0F0;
         margin-top: 10px;
     `
+    const stockList = stocks.map(
+        (stock, index) => (
+            <List stocks={stock}/>
+        )
+    )
 
     return (
         <Div>
             시세
-            <table>
-            <tr>
-                <List stocks={stocks}/>
-            </tr>
-            </table>
+            <table style={{margin: 'auto'}}> {stockList} </table>
         </Div>
     );
 };

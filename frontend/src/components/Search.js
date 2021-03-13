@@ -3,7 +3,12 @@ import css from 'styled-components';
 import Modal from '../components/Modal';
 import {buyStock} from '../services/trade';
 
-
+const Input = css.input.attrs({
+  type: "text",
+  size: "25"
+})`
+  float: left;
+`;
 
 function SearchInput({search, keyword, stock}) {
   const [modalVisible, setModalVisible] = useState(false)
@@ -11,12 +16,7 @@ function SearchInput({search, keyword, stock}) {
   const [number, setNumber] = useState('')
   const [money, setMoney] = useState('')
 
-  const Input = css.input.attrs({
-    type: "text",
-    size: "25"
-  })`
-    float: left;
-  `;
+  
 
 //  useEffect(
 //    () => {
