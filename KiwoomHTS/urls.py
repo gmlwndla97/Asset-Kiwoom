@@ -23,5 +23,6 @@ urlpatterns = [
     url('stock/', include('stock.urls')),
     url('user/', include('user.urls')),
     url('trade/', include('trade.urls')),
+    url('history/', include('history.urls')),
     re_path('.*', TemplateView.as_view(template_name='index.html'))
 ]

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'stock',
     'user',
     'trade',
+    'history',
 ]
 
 MIDDLEWARE = [

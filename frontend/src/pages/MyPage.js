@@ -116,18 +116,6 @@ function MyPage(props) {
      
       </Box>
 
-      {/* <Container>
-        <button
-        onClick={()=>
-        {
-          handlePopup(true);
-        }}
-        >
-          팝업보여주기
-        </button>
-        {popup && <Popup onClose={handlePopup} />}
-      </Container> */}
-     
 
     </div>
   );

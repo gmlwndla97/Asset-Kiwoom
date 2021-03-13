@@ -23,5 +23,5 @@ def current_user(request):
     print(accounts)
     print(user_id)
     print(user_name)
-
+    
     return Response(user_name + user_id)

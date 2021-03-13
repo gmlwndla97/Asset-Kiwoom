@@ -27,7 +27,7 @@ function Home() {
   function userCallback(data) {
     setUser(data);
     initFavoriteStock();
-    //connectRealStock();
+    connectRealStock();
   }
 
   function favoriteCallback(data) {
