@@ -1322,3 +1322,7 @@ Traceback (most recent call last):
   File "C:\Users\82105\PycharmProjects\seven_api\KiwoomHTS\trade\views.py", line 22, in buy_stock
     stock_account = account[0]
 IndexError: list index out of range
+WARNING:django.security.csrf:Forbidden (CSRF cookie not set.): /mypage
+WARNING:django.security.csrf:Forbidden (CSRF cookie not set.): /mypage
+WARNING:django.security.csrf:Forbidden (CSRF cookie not set.): /mypage
+INFO:django.utils.autoreload:C:\Users\LG\Desktop\ssss\KiwoomHTS\user\views.py changed, reloading.
