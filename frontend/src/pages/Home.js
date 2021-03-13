@@ -4,21 +4,16 @@ import { getStock, getFavoriteStock, getRealStock } from '../services/stock';
 import SearchInput from '../components/Search';
 import FavoriteList from '../components/Favorite';
 import StockTable from '../components/StockTable';
+import StockChart from '../components/StockChart';
 
 function Home() {
   const [user, setUser] = useState('');
   const [stock, setStock] = useState('');
   const [code, setCode] = useState('');
+  const [chartData, setChartData] = useState('');
   const [favorites, setFavorites] = useState([]);
   const [realStocks, setRealStocks] = useState([]);
-
-//  openModal = () => {
-//    this.setState({ isModalOpen: true });
-//  };
-//
-//  closeModal = () => {
-//    this.setState({ isModalOpen: false });
-//  };
+  var socket;
 
   function stockCallback(data) {
     setStock(JSON.stringify(data));
@@ -27,7 +22,6 @@ function Home() {
   function userCallback(data) {
     setUser(data);
     initFavoriteStock();
-    //connectRealStock();
   }
 
   function favoriteCallback(data) {
@@ -35,7 +29,17 @@ function Home() {
   }
 
   function realStockCallback(data) {
-    setRealStocks(data);
+    console.log(data['message']);
+    var list = [];
+    for(let key in data[0]) {
+        var row = [];
+        row.push(key);
+        row.push(data[0][key]);
+        list.push(row);
+    }
+
+    console.log(list);
+    setRealStocks(list);
   }
 
   const getWord = (e)=> {
@@ -53,7 +57,11 @@ function Home() {
   }
 
   function connectRealStock() {
-    getRealStock(null, realStockCallback);
+    socket = getRealStock(realStockCallback);
+  }
+
+  function disconnectRealStock() {
+    socket.close();
   }
 
   useEffect(
@@ -64,7 +72,7 @@ function Home() {
 
   return (
     <div>
-      <table style={{width: '75vw', float: 'left', 'border-spacing': '20px'}}>
+      <table style={{width: '75vw', float: 'left', 'borderSpacing': '20px'}}>
         <tr>
           <td>
             <SearchInput
@@ -73,6 +81,8 @@ function Home() {
               stock={stock}
               buy={stock}/>
             사용자는 {user}입니다.
+            <button onClick={connectRealStock}>시작</button>
+            <button onClick={disconnectRealStock}>중지</button>
             <StockTable
               stocks={realStocks}/>
           </td>
@@ -82,7 +92,10 @@ function Home() {
           </td>
         </tr>
         <tr>
-          <td colSpan="2">차트</td>
+          <td colSpan="2">
+            <StockChart
+              data={chartData} />
+          </td>
         </tr>
       </table>
       
