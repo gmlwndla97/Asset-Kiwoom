@@ -1326,3 +1326,28 @@ WARNING:django.security.csrf:Forbidden (CSRF cookie not set.): /mypage
 WARNING:django.security.csrf:Forbidden (CSRF cookie not set.): /mypage
 WARNING:django.security.csrf:Forbidden (CSRF cookie not set.): /mypage
 INFO:django.utils.autoreload:C:\Users\LG\Desktop\ssss\KiwoomHTS\user\views.py changed, reloading.
+[13/Mar/2021 15:17:18] DEBUG [django.db.backends:128] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Mar/2021 15:17:18] DEBUG [django.db.backends:128] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+[13/Mar/2021 15:20:44] DEBUG [django.db.backends:128] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Mar/2021 15:20:44] DEBUG [django.db.backends:128] (0.016) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+[13/Mar/2021 15:28:45] DEBUG [django.db.backends:128] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Mar/2021 15:28:45] DEBUG [django.db.backends:128] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+[13/Mar/2021 15:31:43] DEBUG [django.db.backends:128] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Mar/2021 15:31:43] DEBUG [django.db.backends:128] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+[13/Mar/2021 15:36:33] DEBUG [django.db.backends:128] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Mar/2021 15:36:33] DEBUG [django.db.backends:128] (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()

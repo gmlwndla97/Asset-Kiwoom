@@ -3,4 +3,5 @@ from .views import *
 
 urlpatterns = [
     path('buy/', buy_stock),
+    path('sell/', sell_stock),
 ]

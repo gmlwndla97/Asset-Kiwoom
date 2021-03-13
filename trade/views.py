@@ -11,7 +11,7 @@ from .models import *
 def buy_stock(request):
     kiwoom = Kiwoom()
     # kiwoom.CommConnect(block=True)
-    data = "매매시매"
+    data = "매매시작"
     print(data)
     code = request.POST.get('code', '005930')
     number = int(request.POST.get('number', '1'))
@@ -38,4 +38,26 @@ def buy_stock(request):
     # data = "매매매"
     # print(output)
     # print(accounts)
+    data = "매매끝"
+    return Response(str(code) + " " + str(number) + " " + str(money) + " " + str(stock_account))
+
+
+@api_view(['POST'])
+def sell_stock(request):
+    kiwoom = Kiwoom()
+    # kiwoom.CommConnect(block=True)
+    data = "매수시작"
+    print(data)
+    code = request.POST.get('code', '005930')
+    number = int(request.POST.get('number', '1'))
+    money = int(request.POST.get('money', 83100))
+    # 주식계좌
+    account = kiwoom.GetLoginInfo("ACCNO")
+    # stock_account = '8156687211'
+    stock_account = account[0]
+    # #opt 10076
+    # # 삼성전자, 10주, 시장가주문 매수
+    print(str(code) + " " + str(number) + " " + str(money) + " " + str(stock_account))
+    output = kiwoom.SendOrder("시장가매수", "0101", stock_account, 2, code, number, money, "00", "")
+    data = "매매끝"
     return Response(str(code) + " " + str(number) + " " + str(money) + " " + str(stock_account))
