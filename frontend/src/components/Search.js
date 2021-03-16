@@ -46,12 +46,21 @@ function SearchInput({search, keyword, stock}) {
     }
 
     const handleSubmit= e=>{
-        const param = new URLSearchParams();
-        param.append('code', code);
-        param.append('number', number);
-        param.append('money', money);
-        alert(param)
-        buyStock(param,null);
+//        const param = new URLSearchParams();
+//        const param = new FormData();
+//        param.append('code', code);
+//        param.append('number', number);
+//        param.append('money', money);
+//        param = {"code": code,"number": number,"money": money};
+        var param = {"code": code,"number": number,"money": money};
+        var formData = JSON.stringify(param);
+        alert(formData)
+        fetch('http://127.0.0.1:8000/trade/buy/', {
+            method: 'POST',
+            body: formData,
+            headers: { 'Content-Type': 'application/json' },
+    })
+//        buyStock(formData,null);
     }
 
   

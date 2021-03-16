@@ -1,7 +1,7 @@
-import Axios from '../core/Axios';
+import Axios2 from '../core/Axios2';
 
 function buyStock(value, callback) {
-    Axios('trade/buy', value, null);
+    Axios2('trade/buy', value, null);
 //    Axios('trade/buy', null, null);
 }
 
