@@ -9,34 +9,21 @@ import pandas as pd
 
 @api_view(['POST'])
 def current_account(request):
-  
+
     kiwoom = Kiwoom() # Kiwoom 인스턴스 생성
     kiwoom.CommConnect() # API 접속
+    account_list = kiwoom.GetLoginInfo("ACCNO")
+    account = account_list[0]
 
-    # TR 요청 (연속조회)
-    dfs = []
+    # opw00018 요청
     df = kiwoom.block_request("opw00018",
-                            계좌번호="8156783711",
+                            계좌번호=account,
                             비밀번호="",
-                            비밀번호입력매체구분=00,
-                            조회구분=1,
+                            비밀번호입력매체구분="00",
+                            조회구분=2,
                             output="계좌평가잔고개별합산",
                             next=0)
-    print(df.head())
-    dfs.append(df)
 
-    while kiwoom.tr_remained:
-        df = kiwoom.block_request("opw00018",
-                               계좌번호="8156783711",
-                                비밀번호="",
-                                비밀번호입력매체구분=00,
-                                조회구분=1,
-                                output="계좌평가잔고개별합산",
-                                next=2)
-        dfs.append(df)
-        time.sleep(1)
-
-    df = pd.concat(dfs)
-    print(df)
-    return Response()
+    data = df.to_json(orient="records", force_ascii=False)
+    return Response(data)
 

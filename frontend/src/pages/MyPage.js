@@ -1,10 +1,27 @@
 import React, { useState, useEffect, Component } from 'react';
 import css from 'styled-components';
 import styled from 'styled-components';
+import { getAccount } from '../services/history';
 
 
+function MyPage() {
+  const [account, setAccount] = useState('');
 
-function MyPage(props) {
+  function callback(data) {
+    setAccount(JSON.stringify(data));
+  }
+
+  function getAccountList() {
+    getAccount(callback);
+  }
+
+  useEffect(
+    () => {
+        getAccountList();
+    }, []
+  );
+
+
   const SelectionBar=css.div`
   border-radius: 5px;
   float:left;
@@ -107,11 +124,12 @@ function MyPage(props) {
           필터
         </Filter>
         <History>
-          <UL>
+         {/* <UL>
             <li> 거래 내역 1 </li>
             <li> 거래 내역 2 </li>
             <li> 거래 내역 3</li>
-          </UL>
+          </UL> */}
+          {account}
         </History>
      
       </Box>
