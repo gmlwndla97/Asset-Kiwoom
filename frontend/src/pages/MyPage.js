@@ -8,7 +8,21 @@ function MyPage() {
   const [account, setAccount] = useState('');
 
   function callback(data) {
-    setAccount(JSON.stringify(data));
+    // obj=Object.values(data)
+    // setAccount(JSON.stringify(obj))
+    //setAccount(JSON.stringify(data))
+    var list = [];
+    Object.keys(data).forEach(function(k){
+      list.push(data[k])
+    });
+    var realList=[];
+
+    for(var i=0; i<list.length;i++){
+      Object.keys(list).forEach(function(k){
+        realList.push(list[k])
+      });
+    };
+    setAccount(JSON.stringify(realList));
   }
 
   function getAccountList() {
@@ -74,7 +88,7 @@ function MyPage() {
   padding: 1rem;
   border-radius: 5px;
   margin-top:30px;
-  width: 500px;
+  width: 100%;
   height: 300px;
   float: left;
   `
@@ -99,10 +113,10 @@ function MyPage() {
  
   
   return (
-    <div style={{width: '75vw', float: 'left', 'border-spacing': '20px'}}>
+    <div style={{width: '100%', float: 'left', 'border-spacing': '20px'}}>
       <SelectionBar>
         <ButtonLI><input type="radio" value="notSigned" id="notSigned" name="selection"/> 
-        <label for="notSigned"> 미체결 </label></ButtonLI>
+        <label for="notSigned" > 미체결 </label></ButtonLI>
 
         <ButtonLI><input type="radio" value="balance" id="balance" name="selection" />
         <label for="balance">잔고</label> </ButtonLI>
@@ -124,12 +138,9 @@ function MyPage() {
           필터
         </Filter>
         <History>
-         {/* <UL>
-            <li> 거래 내역 1 </li>
-            <li> 거래 내역 2 </li>
-            <li> 거래 내역 3</li>
-          </UL> */}
+          종목번호    종목명    평가손익    수익률(%)   매입가    보유수량    매매가능수량    현재가
           {account}
+          
         </History>
      
       </Box>
