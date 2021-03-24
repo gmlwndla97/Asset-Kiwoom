@@ -13,7 +13,7 @@ function Home() {
   const [chartData, setChartData] = useState('');
   const [favorites, setFavorites] = useState([]);
   const [realStocks, setRealStocks] = useState([]);
-  var socket;
+  const [socket, setSocket] = useState();
 
   function stockCallback(data) {
     setStock(JSON.stringify(data));
@@ -22,7 +22,6 @@ function Home() {
   function userCallback(data) {
     setUser(data);
     initFavoriteStock();
-    connectRealStock();
   }
 
   function favoriteCallback(data) {
@@ -31,16 +30,8 @@ function Home() {
 
   function realStockCallback(data) {
     console.log(data['message']);
-    var list = [];
-    for(let key in data[0]) {
-        var row = [];
-        row.push(key);
-        row.push(data[0][key]);
-        list.push(row);
-    }
-
-    console.log(list);
-    setRealStocks(list);
+    setRealStocks(data['message']);
+    setChartData(data['message'][0][1]);
   }
 
   const getWord = (e)=> {
@@ -58,10 +49,14 @@ function Home() {
   }
 
   function connectRealStock() {
-    socket = getRealStock(realStockCallback);
+    setSocket(getRealStock(realStockCallback));
   }
 
   function disconnectRealStock() {
+    // socket.send()
+    socket.send(JSON.stringify({
+      'message': "소켓 해제"
+    }));
     socket.close();
   }
 

@@ -7,31 +7,35 @@ import json
 import time
 
 class RealConsumer(WebsocketConsumer):
+    thread = None
+
     def connect(self):
         print("연결")
         self.accept()
-        self.thread = threading.Thread(target=real_stock(self))
-        self.thread.daemon = True
-        self.thread.start()
+        RealConsumer.thread = threading.Thread(target=real_stock(self))
+        RealConsumer.thread.daemon = True
+        RealConsumer.thread.start()
 
     def disconnect(self, close_code):
+        print("종료")
         try:
             kiwoom = Kiwoom()
             kiwoom.connected_real = False
             kiwoom.received = False
             kiwoom.DisconnectRealData("0101")
-            del self.thread
-            print("종료")
+            del RealConsumer.thread
         except Exception as e:
             print(e)
 
     def receive(self, text_data):
+        print(text_data)
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
+        if message == "소켓 해제":
+            self.disconnect(self)
         self.send(text_data=json.dumps({
             'message': message
         }))
-        print(message)
 
 
 def real_stock(self):
@@ -48,8 +52,13 @@ def real_stock(self):
             while not kiwoom.received:
                 pythoncom.PumpWaitingMessages()
             kiwoom.received = False
+            print(kiwoom.tr_data)
             self.send(text_data=json.dumps({
                 'message': kiwoom.tr_data
             }))
+            time.sleep(2)
+        self.send(text_data=json.dumps({
+            'message': '소켓 해제'
+        }))
     except Exception as e:
         print(e)
