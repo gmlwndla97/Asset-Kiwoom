@@ -1,32 +1,43 @@
 import React, { useState, useEffect, Component } from 'react';
 import css from 'styled-components';
 import styled from 'styled-components';
-import { getAccount } from '../services/history';
-
+import { getRealAccount } from '../services/history';
+import AccountTable from '../components/AccountTable';
 
 function MyPage() {
-  const [account, setAccount] = useState('');
+  const [realAccount, setRealAccount] = useState([]);
+
 
   function callback(data) {
-    // obj=Object.values(data)
-    // setAccount(JSON.stringify(obj))
-    //setAccount(JSON.stringify(data))
-    var list = [];
+   // console.log(data);
+    
+    var valueList = [];
+    data = JSON.parse(data);
     Object.keys(data).forEach(function(k){
-      list.push(data[k])
+      var list = [];
+       for(var key in data[k]) {
+         list.push(data[k][key])
+       }
+       valueList.push(list);
     });
-    var realList=[];
-
-    for(var i=0; i<list.length;i++){
-      Object.keys(list).forEach(function(k){
-        realList.push(list[k])
-      });
-    };
-    setAccount(JSON.stringify(realList));
+    console.log(valueList)
+ 
+    // //console.log(valueList)
+    // // var result = [];
+    // // Object.keys(data).forEach(function(k){
+    // //     result.push(data[key]);
+    // // });
+    // var obj=JSON.parse(data[0])
+    // setRealAccount(obj);
+    // // console.log(valueList)
+    // // setAccount(valueList)
+    // // //setAccount(data)
+    setRealAccount(valueList);
   }
+  
 
   function getAccountList() {
-    getAccount(callback);
+    getRealAccount(callback);
   }
 
   useEffect(
@@ -83,8 +94,7 @@ function MyPage() {
   `
 
 
- const History=css.div`
-  background-color: #F0F0F0;
+ const History=css.div`=
   padding: 1rem;
   border-radius: 5px;
   margin-top:30px;
@@ -138,9 +148,9 @@ function MyPage() {
           필터
         </Filter>
         <History>
-          종목번호    종목명    평가손익    수익률(%)   매입가    보유수량    매매가능수량    현재가
-          {account}
-          
+          종목번호        종목명       평가손익       수익률(%)      매입가       보유수량       매매가능수량        현재가
+          <AccountTable
+          accounts={realAccount} />
         </History>
      
       </Box>
