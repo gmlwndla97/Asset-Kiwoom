@@ -9,29 +9,30 @@ function MyPage() {
 
 
   function callback(data) {
-   // console.log(data);
-    
+
     var valueList = [];
+    var templist=[];
+    templist.push("종목번호");
+    templist.push("종목명");
+    templist.push("평가손익");
+    templist.push("수익률(%)");
+    templist.push("매입가");
+    templist.push("보유수량");
+    templist.push("매매가능수량");
+    templist.push("현재가");
+    valueList.push(templist)
+
     data = JSON.parse(data);
     Object.keys(data).forEach(function(k){
       var list = [];
        for(var key in data[k]) {
+      
          list.push(data[k][key])
        }
        valueList.push(list);
     });
     console.log(valueList)
- 
-    // //console.log(valueList)
-    // // var result = [];
-    // // Object.keys(data).forEach(function(k){
-    // //     result.push(data[key]);
-    // // });
-    // var obj=JSON.parse(data[0])
-    // setRealAccount(obj);
-    // // console.log(valueList)
-    // // setAccount(valueList)
-    // // //setAccount(data)
+
     setRealAccount(valueList);
   }
   
@@ -148,9 +149,7 @@ function MyPage() {
           필터
         </Filter>
         <History>
-          종목번호        종목명       평가손익       수익률(%)      매입가       보유수량       매매가능수량        현재가
-          <AccountTable
-          accounts={realAccount} />
+          <AccountTable accounts={realAccount} />
         </History>
      
       </Box>

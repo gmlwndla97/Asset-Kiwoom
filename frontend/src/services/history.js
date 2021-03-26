@@ -1,8 +1,14 @@
 import Axios from '../core/Axios';
 
-export default function getRealAccount(callback) {
+function getRealAccount(callback) {
     Axios('history/account', null, callback);
 }
+
+function getNotSignedStock(callback) {
+    Axios('history/notSigned', null, callback);
+}
+
 export {
     getRealAccount,
+    getNotSignedStock,
 };
