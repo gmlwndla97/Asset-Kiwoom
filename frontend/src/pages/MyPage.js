@@ -7,7 +7,6 @@ import AccountTable from '../components/AccountTable';
 function MyPage() {
   const [realAccount, setRealAccount] = useState([]);
 
-
   function callback(data) {
 
     var valueList = [];
@@ -48,10 +47,22 @@ function MyPage() {
   );
 
 
+  function showUnSigned(){
+    document.getElementById('notSignedArea').style.display = "block"; // 보여줌
+    document.getElementById('balanceArea').style.display = "none"; // 안보여줌
+
+  }
+
+  function showAccounts(){
+    document.getElementById("balanceArea").style.display = 'block'; // 
+    document.getElementById("notSignedArea").style.display = 'none'; // 
+    
+  }
+
   const SelectionBar=css.div`
   border-radius: 5px;
   float:left;
-  padding-top:20px;
+  padding-top:40px;
   padding-left:20px;
   `
   const ButtonLI = styled.button`
@@ -95,7 +106,7 @@ function MyPage() {
   `
 
 
- const History=css.div`=
+ const History=css.div`
   padding: 1rem;
   border-radius: 5px;
   margin-top:30px;
@@ -127,13 +138,13 @@ function MyPage() {
     <div style={{width: '100%', float: 'left', 'border-spacing': '20px'}}>
       <SelectionBar>
         <ButtonLI><input type="radio" value="notSigned" id="notSigned" name="selection"/> 
-        <label for="notSigned" > 미체결 </label></ButtonLI>
+        <label for="notSigned"  onClick={showUnSigned}> 미체결 </label></ButtonLI>
 
         <ButtonLI><input type="radio" value="balance" id="balance" name="selection" />
-        <label for="balance">잔고</label> </ButtonLI>
+        <label for="balance" onClick={showAccounts} >잔고</label> </ButtonLI>
 
-        <ButtonLI><input type="radio" value="deposit" name="selection"id="selection" />
-        <label for="selection">예수금</label> </ButtonLI>
+        <ButtonLI><input type="radio" value="deposit"id="deposit" name="selection" />
+        <label for="deposit">예수금</label> </ButtonLI>
 
         <ButtonLI><input type="radio" value="todayTrading" id="todayTrading" name="selection" /> 
         <label for="todayTrading">당일매매</label></ButtonLI>
@@ -145,12 +156,14 @@ function MyPage() {
         
       
       <Box>
-        <Filter>
-          필터
-        </Filter>
-        <History>
-          <AccountTable accounts={realAccount} />
-        </History>
+         <history>
+            <div id="notSignedArea">
+            
+            </div>
+            <div id="balanceArea">
+              <AccountTable accounts={realAccount} />
+            </div>
+          </history>  
      
       </Box>
 
