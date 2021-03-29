@@ -38,7 +38,8 @@ def current_account(request):
 def notSigned_stock(request):
     kiwoom = Kiwoom() # Kiwoom 인스턴스 생성
     kiwoom.CommConnect() # API 접속
-
+    account_list = kiwoom.GetLoginInfo("ACCNO")
+    account = account_list[0]
     # opt10075 요청
     df = kiwoom.block_request("opt10075",
                             계좌번호=account,
@@ -47,6 +48,9 @@ def notSigned_stock(request):
                             체결구분=0,
                             output  = "실시간미체결요청",
                             next=0)
-    print(df)
+
+    df=df.drop(['계좌번호','관리사번', '업무구분', '체결누계금액','원주문번호','체결번호',
+    '매도호가', '매수호가', '단위체결가','단위체결량','당일매매수수료','당일매매세금','개인투자자'], axis=1)                         
+    #print(df)
     data = df.to_json(orient="records", force_ascii=False)
     return Response(data)
